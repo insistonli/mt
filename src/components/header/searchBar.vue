@@ -2,7 +2,7 @@
   <div class="search-panel">
     <el-row class="m-header-searchbar">
       <el-col :span="3" class="left">
-        <img src="//s0.meituan.net/bs/fe-web-meituan/e5eeaef/img/logo.png" alt="美团" />
+        <img src="//s0.meituan.net/bs/fe-web-meituan/e5eeaef/img/logo.png" alt="美团" @click="indexRoute"/>
       </el-col>
       <el-col :span="15" class="center">
         <div class="wrapper">
@@ -87,6 +87,9 @@ export default {
           return item.indexOf(val) > -1;
         });
       });
+    },
+    indexRoute () {
+      this.$router.push({name: 'default'})
     }
   }
 };
